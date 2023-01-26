@@ -1,28 +1,25 @@
-// happy number
 #include<stdio.h>
 int main()
 {
-    int n,m,sum=0,d;
+    int n,m,r=0;
     scanf("%d",&n);
-    m=n;
-    while(m>=10)
+    while(n)
     {
-        while(m!=0)
+        m=n%10;
+        r=r+m*m;
+        n=n/10;
+        if(n==0 && r>9)
         {
-            d=m%10;
-            sum=sum+(d*d);
-            m=m/10;
+            n=r;
+            r=0;
         }
-        m=sum;
-        sum=0;
     }
-    if(m==1)
-    {
-        printf("True");
-    }
-    else
+    if(r!=1)
     {
         printf("False");
     }
-    return 0;
+    else
+    {
+        printf("True");
+    }
 }
