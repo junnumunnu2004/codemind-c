@@ -1,20 +1,19 @@
-//neon number
 #include<stdio.h>
 int main()
 {
-    int n,s=0,q,r;
+    int n,s=0,r;
     scanf("%d",&n);
-    q=(n*n);
-    while(q!=0)
+    r=n;
+    n=n*n;
+    while(n)
     {
-        r=q%10;
-        s+=r;
-        q=q/10;
+        int k=n%10;
+        s=s+k;
+        n=n/10;
     }
-    if(s==n)
+    if(r==s)
     {
         printf("Neon Number");
-        
     }
     else
     {
