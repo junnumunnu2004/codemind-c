@@ -1,17 +1,15 @@
- // sum and product of gn
 #include<stdio.h>
 int main()
 {
-    int n,s=0,p=1,i,diff,q,r;
+    int n,s=0,m=1,i,r;
     scanf("%d",&n);
-      q=n;
-      while(q!=0)
-      {
-          r=q%10;
-          p=p*r;
-          s+=r;
-          q=q/10;
-      }
-      diff=(p-s);
-      printf("%d",diff);
+    while(n!=0)
+    {
+        r=n%10;
+        s=s+r;
+        m=m*r;
+        n=n/10;
+    }
+    i=m-s;
+    printf("%d",i);
 }
