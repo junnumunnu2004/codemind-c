@@ -1,21 +1,20 @@
-// plindrome
 #include<stdio.h>
 int main()
 {
-    int n,s=0,q,r,rem;
+    int n,r,i,s=0;
     scanf("%d",&n);
-    q=n;
-    while(q!=0)
+    r=n;
+    while(n!=0)
     {
-        r=q%10;
-        s=s*10+r;
-        q=q/10;
+        s=s*10+n%10;
+        n=n/10;
     }
-    if(s==n)
+    if(r==s)
     {
         printf("True");
     }
     else
-    {printf("False");
+    {
+        printf("False");
     }
 }
